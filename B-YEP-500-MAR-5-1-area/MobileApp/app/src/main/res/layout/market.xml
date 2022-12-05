@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow1"
+    tools:context="com.example.area.modules.Market">
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/ic_mustard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19999999" />
+
+    <TextView
+        android:id="@+id/desc1"
+        android:layout_width="329dp"
+        android:layout_height="70dp"
+        android:text="Get a mail about market stock by mail
+        list of stock (AAPL, MSFT, AMZN, GOOGL, FB, INTC, ADBE, NFLX, TSLA)"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <EditText
+        android:id="@+id/Stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/grey1"
+        android:ems="10"
+        android:hint="Stock"
+        android:importantForAutofill="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc1"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <EditText
+        android:id="@+id/Year3"
+        android:layout_width="64dp"
+        android:layout_height="47dp"
+        android:backgroundTint="@color/grey1"
+        android:ems="10"
+        android:hint="YYYY"
+        android:maxLength="4"
+        android:importantForAutofill="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Stock"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <EditText
+        android:id="@+id/Month3"
+        android:layout_width="64dp"
+        android:layout_height="47dp"
+        android:backgroundTint="@color/grey1"
+        android:ems="10"
+        android:hint="MM"
+        android:importantForAutofill="no"
+        android:maxLength="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.328"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Stock"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <EditText
+        android:id="@+id/Day3"
+        android:layout_width="64dp"
+        android:layout_height="47dp"
+        android:backgroundTint="@color/grey1"
+        android:ems="10"
+        android:hint="DD"
+        android:importantForAutofill="no"
+        android:maxLength="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Stock"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <EditText
+        android:id="@+id/Hour3"
+        android:layout_width="64dp"
+        android:layout_height="47dp"
+        android:backgroundTint="@color/grey1"
+        android:ems="10"
+        android:hint="HH"
+        android:importantForAutofill="no"
+        android:maxLength="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.697"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Stock"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <EditText
+        android:id="@+id/Minutes3"
+        android:layout_width="64dp"
+        android:layout_height="47dp"
+        android:backgroundTint="@color/grey1"
+        android:ems="10"
+        android:hint="mm"
+        android:importantForAutofill="no"
+        android:maxLength="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Stock"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <Button
+        android:id="@+id/send3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/grey1"
+        android:gravity="center"
+        android:text="Send"
+        android:textColor="@color/whitesmoke1"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Day3"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

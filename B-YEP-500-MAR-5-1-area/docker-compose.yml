@@ -1,0 +1,18 @@
+version: "2"
+services:
+  server:
+    container_name: server_area
+    build: ./Server
+    ports:
+      - "8080:8080"
+    networks:
+      - link_web_server
+  web:
+    build: ./Web
+    ports:
+      - "8081:8081"
+    networks:
+      - link_web_server
+networks:
+  link_web_server:
+      driver: bridge

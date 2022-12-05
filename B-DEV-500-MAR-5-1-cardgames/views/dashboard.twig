@@ -1,0 +1,322 @@
+  <!doctype html>
+  <html class="no-js" lang="">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>B-DEV-500 Dashboard</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="shortcut icon" href="images/favicon.ico">
+      <link rel="stylesheet" type="text/css" href="stylesheets/theme.css" />
+      <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <script src="javascripts/theme.min.js"></script>
+      <link href="css/font-face.css" rel="stylesheet" media="all">
+      <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+      <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+      <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+      <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+      <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+      <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+      <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+      <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+      <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+      <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+      <link href="css/theme.css" rel="stylesheet" media="all">
+
+  </head>
+  <body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark" role="navigation">
+      <div class="container no-override">
+          <a class="navbar-brand" href="/">
+              B-DEV-500 Dashboard
+          </a>
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse">
+              <ul class="navbar-nav">
+                  {% if not user %}
+                      <li class="nav-item active dropdown">
+                          <a href="/register" class="nav-link dropdown-toggle">
+                              Register
+                          </a>
+    
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a href="/login" class="nav-link dropdown-toggle">
+                              Login
+                          </a>
+                      </li>
+                  {% else %}
+                      <li class="nav-item active dropdown">
+                          <a href="/dashboard" class="nav-link dropdown-toggle">
+                              Home
+                          </a>
+                      </li>
+                      <li class="nav-item active dropdown">
+                          <a href="/weather" class="nav-link dropdown-toggle">
+                              Weather
+                          </a>
+                      </li>
+                      <li class="nav-item active dropdown">
+                          <a href="/cinema" class="nav-link dropdown-toggle">
+                              Cinema
+                          </a>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                              {{user}}
+                              <i class="ion-chevron-down"></i>
+                          </a>
+                          <div class="dropdown-menu" role="menu">
+                              <a class="dropdown-item" href="dashboard">Home</a>
+                              <a class="dropdown-item" href="profil">Profil</a>
+                              <a class="dropdown-item" href="logout" style="color: #9b2625;">Logout</a>
+                          </div>
+                      </li>
+                  {% endif %}
+                  </ul>
+             </div>
+          </div>
+        </nav>
+  
+
+        <div class="page-container">
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                    <h2 class="title-1">Randoms pictures from unsplash.com</h2>
+                        <div class="row m-t-25">
+                            <div class="col-sm-6 col-lg-4">
+                                <img src="https://source.unsplash.com/random/800x600">
+                            </div>
+                            <div class="col-sm-6 col-lg-4">
+                                <img src="https://source.unsplash.com/daily">
+                            </div>
+                            <div class="col-sm-6 col-lg-4">
+                                <img src="https://source.unsplash.com/800x600/?nature,water">
+                            </div>
+                        </div>
+                        <div class="row"">
+                            <div class="col-md-12">
+                                <div class="overview-wrap">
+                                    <h2 class="title-1">Weather Plugin and Chuck</h2>
+                                    <a href="javascript:location.reload(true)">
+                                        <button class="au-btn au-btn-icon au-btn--blue">
+                                            <i class="fas fa-refresh"></i>Refresh
+                                        </button>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                            
+                        <div class="row m-t-25">
+                            
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="overview-item overview-item--c1">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="fas fa-thermometer-half"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>{{current_degrees}}</h2>
+                                                <span>{{weather_town}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="overview-item overview-item--c2">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="fas fa-cloud"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>{{current_humidity}}</h2>
+                                                <span>{{weather_town}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+	
+							<div class="col-sm-6 col-lg-4">
+								<div class="overview-item overview-item--c1">
+									<div class="overview__inner">
+										<div class="overview-box clearfix">
+											<div class="icon">
+												<i class="fas fa-smile-o"></i>
+											</div>
+											<div class="text">
+												<h2>{{chuck_norris}}</h2>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+                        </div>
+    
+                    <div class="table-responsive table--no-card m-b-30">
+                        <h2 class="title-1">Cinema Plugin</h2>
+                        <table class="table table-borderless table-data3">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Popularity</th>
+                                    <th>Release Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% for movie in movies_array %}
+                                <tr>
+                                    <td><a target="_blank" rel="noopener noreferrer" href={{ movie.poster_path }}>{{movie.name}}</a></td>
+                                    <td href={{movie.poster_path}}>{{movie.popularity}}</td>
+                                    <td href={{movie.poster_path}}>{{movie.release_date}}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+
+                <div id="map">
+                </div>
+                <script>
+                    function initAutocomplete() {
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            center: {lat:  44.3333, lng: 1.2167},
+                            zoom: 7,
+                            zoomControl: false,
+                            scaleControl: false,
+                            scrollwheel: false,
+                            disableDoubleClickZoom: true,
+                            mapTypeId: 'roadmap'
+                        });
+                        $(window).resize(function() {
+                            // (the 'map' here is the result of the created 'var map = ...' above)
+                            google.maps.event.trigger(map, "resize");
+                        });
+                        var input = document.getElementById('pac-input');
+                        var searchBox = new google.maps.places.SearchBox(input);
+                        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+                        map.addListener('bounds_changed', function() {
+                            searchBox.setBounds(map.getBounds());
+                        });
+
+                        var markers = [];
+                        searchBox.addListener('places_changed', function() {
+                            var places = searchBox.getPlaces();
+
+                            if (places.length == 0) {
+                                return;
+                            }
+
+                            markers.forEach(function(marker) {
+                                marker.setMap(null);
+                            });
+                            markers = [];
+
+                            var bounds = new google.maps.LatLngBounds();
+                            places.forEach(function(place) {
+                                if (!place.geometry) {
+                                    console.log("Returned place contains no geometry");
+                                    return;
+                                }
+                                var icon = {
+                                    url: place.icon,
+                                    size: new google.maps.Size(71, 71),
+                                    origin: new google.maps.Point(0, 0),
+                                    anchor: new google.maps.Point(17, 34),
+                                    scaledSize: new google.maps.Size(25, 25)
+                                };
+
+                                markers.push(new google.maps.Marker({
+                                    map: map,
+                                    icon: icon,
+                                    title: place.name,
+                                    position: place.geometry.location
+                                }));
+
+                                if (place.geometry.viewport) {
+                                    // Only geocodes have viewport.
+                                    bounds.union(place.geometry.viewport);
+                                } else {
+                                    bounds.extend(place.geometry.location);
+                                }
+                            });
+                            map.fitBounds(bounds);
+                        });
+                    }
+                </script>
+					<div class="row">
+                        <h2 class="title-1">Youtuber Comparer Plugin</h2>
+						<div class="row m-t-25">
+							<div class="col-sm-6 col-lg-6">
+								<iframe height="700px" width="1380px" frameborder="0" src="https://akshatmittal.com/youtube-realtime/embed/#!/{{ youtuber }}_A" style="border: 0; width:1380px; height:700px; background-color: #FFF;"></iframe>
+							</div>
+							<div class="col-sm-6 col-lg-6">
+								<iframe height="700px" width="1380px" frameborder="0" src="https://akshatmittal.com/youtube-realtime/embed/#!/{{ youtuber1 }}_A" style="border: 0; width:1380; height:700px; background-color: #FFF;"></iframe>
+							</div>
+						</div>
+					</div>
+	
+					<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIEaxUKHFVci_RuDQ3Zgt2VFibpZytqyg&libraries=places&callback=initAutocomplete"></script>
+                <div class="row">
+                    <h2 class="title-1">Youtube Player Plugin</h2>
+                    <div class="row m-t-25">
+                        <div class="col-sm-6 col-lg-3">
+                            <div id="ytplayer"></div>
+                        </div>
+                    </div>
+                </div>
+    
+                <script>
+                    var tag = document.createElement('script');
+                    tag.src = "https://www.youtube.com/player_api";
+                    var firstScriptTag = document.getElementsByTagName('script')[0];
+                    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                    var player;
+                    function onYouTubePlayerAPIReady() {
+                        player = new YT.Player('ytplayer', {
+                            height: '720',
+                            width: '1280',
+                            videoId: 'dQw4w9WgXcQ'
+                        });
+                    }
+                </script>
+            </div>
+        </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js">
+    </script>
+    <!-- Main JS-->
+    <script src="javascripts/main.js"></script>
+    </body>
+</html>

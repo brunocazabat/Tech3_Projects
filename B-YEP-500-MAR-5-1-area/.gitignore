@@ -1,0 +1,4 @@
+.vscode/
+Server/node_modules
+Server/test
+.idea

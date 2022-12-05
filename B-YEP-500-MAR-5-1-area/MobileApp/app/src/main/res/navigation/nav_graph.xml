@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.area.loginFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_deletingUser"
+            app:destination="@id/deletingUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.area.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_menu">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_areaModules"
+            app:destination="@id/areaModules" />
+        <action
+            android:id="@+id/action_SecondFragment_to_deletingUser"
+            app:destination="@id/deletingUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/areaModules"
+        android:name="com.example.area.AreaModules"
+        android:label="fragment_area_modules"
+        tools:layout="@layout/fragment_area_modules" >
+        <action
+            android:id="@+id/action_areaModules_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_areaModules_to_sendMeteoInfoOnDate"
+            app:destination="@id/sendMeteoInfoOnDate" />
+        <action
+            android:id="@+id/action_areaModules_to_sendMeteoOnDatePrecise"
+            app:destination="@id/sendMeteoOnDatePrecise" />
+        <action
+            android:id="@+id/action_areaModules_to_tempsSupFragment"
+            app:destination="@id/tempsSupFragment" />
+        <action
+            android:id="@+id/action_areaModules_to_meteoImgur"
+            app:destination="@id/meteoImgur" />
+        <action
+            android:id="@+id/action_areaModules_to_newsCategoryFragment2"
+            app:destination="@id/newsCategoryFragment" />
+        <action
+            android:id="@+id/action_areaModules_to_newsSubjectFragment"
+            app:destination="@id/newsSubjectFragment" />
+        <action
+            android:id="@+id/action_areaModules_to_lastNews"
+            app:destination="@id/lastNews" />
+        <action
+            android:id="@+id/action_areaModules_to_lastNews2"
+            app:destination="@id/lastNews" />
+        <action
+            android:id="@+id/action_areaModules_to_rememberDate2"
+            app:destination="@id/rememberDate" />
+        <action
+            android:id="@+id/action_areaModules_to_creditEpitech"
+            app:destination="@id/creditEpitech" />
+        <action
+            android:id="@+id/action_areaModules_to_epitechBinome"
+            app:destination="@id/epitechBinome" />
+        <action
+            android:id="@+id/action_areaModules_to_messageEpitech"
+            app:destination="@id/messageEpitech" />
+        <action
+            android:id="@+id/action_areaModules_to_mailOnNewMail"
+            app:destination="@id/mailOnNewMail" />
+        <action
+            android:id="@+id/action_areaModules_to_mailerFragment"
+            app:destination="@id/mailerFragment" />
+        <action
+            android:id="@+id/action_areaModules_to_market"
+            app:destination="@id/market" />
+        <action
+            android:id="@+id/action_areaModules_to_newVideoFragment"
+            app:destination="@id/newVideoFragment" />
+        <action
+            android:id="@+id/action_areaModules_to_newsImgur"
+            app:destination="@id/newsImgur" />
+        <action
+            android:id="@+id/action_areaModules_to_XViewsFragment"
+            app:destination="@id/XViewsFragment" />
+        <action
+            android:id="@+id/action_areaModules_to_thumbailFragment"
+            app:destination="@id/thumbailFragment" />
+        <action
+            android:id="@+id/action_areaModules_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_areaModules_to_deletingUser"
+            app:destination="@id/deletingUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.area.RegisterFragment"
+        android:label="RegisterFragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_registerFragment_self"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deletingUser"
+        android:name="com.example.area.DeletingUser"
+        android:label="DeletingUser" >
+        <action
+            android:id="@+id/action_deletingUser_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/itemsActivity"
+        android:name="com.example.area.ItemsActivity"
+        android:label="activity_items"
+        tools:layout="@layout/activity_items" />
+    <fragment
+        android:id="@+id/sendMeteoInfoOnDate"
+        android:name="com.example.area.modules.sendCurrentMeteo"
+        android:label="fragment_send_meteo_info_on_date"
+        tools:layout="@layout/fragment_send_meteo_info_on_date" >
+        <action
+            android:id="@+id/action_sendMeteoInfoOnDate_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_sendMeteoInfoOnDate_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_sendMeteoInfoOnDate_to_deletingUser"
+            app:destination="@id/deletingUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/sendMeteoOnDatePrecise"
+        android:name="com.example.area.modules.sendMeteoOnDatePrecise"
+        android:label="fragment_send_meteo_on_date_precise"
+        tools:layout="@layout/fragment_send_meteo_on_date_precise" >
+        <action
+            android:id="@+id/action_sendMeteoOnDatePrecise_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_sendMeteoOnDatePrecise_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_sendMeteoOnDatePrecise_to_deletingUser"
+            app:destination="@id/deletingUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/tempsSupFragment"
+        android:name="com.example.area.modules.TempsSupFragment"
+        android:label="meteo_imgur"
+        tools:layout="@layout/meteo_imgur" >
+        <action
+            android:id="@+id/action_tempsSupFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_tempsSupFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_tempsSupFragment_to_deletingUser"
+            app:destination="@id/deletingUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/meteoImgur"
+        android:name="com.example.area.modules.MeteoImgur"
+        android:label="meteo_imgur"
+        tools:layout="@layout/meteo_imgur" >
+        <action
+            android:id="@+id/action_meteoImgur_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_meteoImgur_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_meteoImgur_to_deletingUser"
+            app:destination="@id/deletingUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsCategoryFragment"
+        android:name="com.example.area.modules.NewsCategoryFragment"
+        android:label="newscategory"
+        tools:layout="@layout/newscategory" >
+        <action
+            android:id="@+id/action_newsCategoryFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_newsCategoryFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_newsCategoryFragment_to_deletingUser"
+            app:destination="@id/deletingUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsSubjectFragment"
+        android:name="com.example.area.modules.NewsSubjectFragment"
+        android:label="subjectnews"
+        tools:layout="@layout/subjectnews" >
+        <action
+            android:id="@+id/action_newsSubjectFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_newsSubjectFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_newsSubjectFragment_to_deletingUser"
+            app:destination="@id/deletingUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/lastNews"
+        android:name="com.example.area.modules.LastNews"
+        android:label="lastnews"
+        tools:layout="@layout/lastnews" >
+        <action
+            android:id="@+id/action_lastNews_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_lastNews_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_lastNews_to_deletingUser"
+            app:destination="@id/deletingUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/rememberDate"
+        android:name="com.example.area.modules.RememberDate"
+        android:label="RememberDate" >
+        <action
+            android:id="@+id/action_rememberDate_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_rememberDate_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_rememberDate_to_deletingUser"
+            app:destination="@id/deletingUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/creditEpitech"
+        android:name="com.example.area.modules.CreditEpitech"
+        android:label="creditepitech"
+        tools:layout="@layout/creditepitech" >
+        <action
+            android:id="@+id/action_creditEpitech_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_creditEpitech_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_creditEpitech_to_deletingUser"
+            app:destination="@id/deletingUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/epitechBinome"
+        android:name="com.example.area.modules.EpitechBinome"
+        android:label="epitechbinome"
+        tools:layout="@layout/epitechbinome" >
+        <action
+            android:id="@+id/action_epitechBinome_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_epitechBinome_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_epitechBinome_to_deletingUser"
+            app:destination="@id/deletingUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageEpitech"
+        android:name="com.example.area.modules.MessageEpitech"
+        android:label="epitechmessage"
+        tools:layout="@layout/epitechmessage" >
+        <action
+            android:id="@+id/action_messageEpitech_to_SecondFragment2"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_messageEpitech_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_messageEpitech_to_deletingUser"
+            app:destination="@id/deletingUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/mailOnNewMail"
+        android:name="com.example.area.modules.MailOnNewMail"
+        android:label="mail_on_new_mail"
+        tools:layout="@layout/mail_on_new_mail" >
+        <action
+            android:id="@+id/action_mailOnNewMail_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_mailOnNewMail_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_mailOnNewMail_to_deletingUser"
+            app:destination="@id/deletingUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/mailerFragment"
+        android:name="com.example.area.modules.MailerFragment"
+        android:label="mail_fragment"
+        tools:layout="@layout/mail_fragment" >
+        <action
+            android:id="@+id/action_mailerFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_mailerFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_mailerFragment_to_deletingUser"
+            app:destination="@id/deletingUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/market"
+        android:name="com.example.area.modules.Market"
+        android:label="market"
+        tools:layout="@layout/market" >
+        <action
+            android:id="@+id/action_market_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_market_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_market_to_deletingUser"
+            app:destination="@id/deletingUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/newVideoFragment"
+        android:name="com.example.area.modules.NewVideoFragment"
+        android:label="newvideo_fragment"
+        tools:layout="@layout/newvideo_fragment" >
+        <action
+            android:id="@+id/action_newVideoFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_newVideoFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_newVideoFragment_to_deletingUser"
+            app:destination="@id/deletingUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsImgur"
+        android:name="com.example.area.modules.NewsImgur"
+        android:label="randomnewtoimgur"
+        tools:layout="@layout/randomnewtoimgur" >
+        <action
+            android:id="@+id/action_newsImgur_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_newsImgur_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_newsImgur_to_deletingUser"
+            app:destination="@id/deletingUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/XViewsFragment"
+        android:name="com.example.area.modules.XViewsFragment"
+        android:label="xviews_fragment"
+        tools:layout="@layout/xviews_fragment" >
+        <action
+            android:id="@+id/action_XViewsFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_XViewsFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_XViewsFragment_to_deletingUser"
+            app:destination="@id/deletingUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/thumbailFragment"
+        android:name="com.example.area.modules.ThumbailFragment"
+        android:label="thumbnail_fragment"
+        tools:layout="@layout/thumbnail_fragment" >
+        <action
+            android:id="@+id/action_thumbailFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_thumbailFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_thumbailFragment_to_deletingUser"
+            app:destination="@id/deletingUser" />
+    </fragment>
+</navigation>

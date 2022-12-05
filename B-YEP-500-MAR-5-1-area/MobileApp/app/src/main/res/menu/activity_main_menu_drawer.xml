@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/epitechDrawer"
+            android:icon="@drawable/ic_epitech_ico"
+            android:title="Epitech" />
+        <item
+            android:id="@+id/imgurDrawer"
+            android:icon="@drawable/ic_imgur"
+            android:title="Imgur" />
+    </group>
+
+    <item android:title="Configuration">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/MainMenuDrawer"
+                    android:icon="@drawable/ic_menu"
+                    android:title="Main Menu" />
+                <item
+                    android:id="@+id/logoutDrawer"
+                    android:icon="@drawable/ic_logout"
+                    android:title="Logout" />
+                <item
+                    android:id="@+id/deleteDrawer"
+                    android:icon="@drawable/ic_delete"
+                    android:title="Delete Account" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

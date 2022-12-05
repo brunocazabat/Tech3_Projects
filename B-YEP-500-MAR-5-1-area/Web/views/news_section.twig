@@ -1,0 +1,240 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>B-DEV-510 ActionREAction</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="stylesheets/theme.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+    <script src="javascripts/theme.min.js"></script>
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" role="navigation">
+        <div class="container no-override">
+            <a class="navbar-brand" href="/">
+                <img src="../images/logo.svg" height="50px" width="50px">
+                B-DEV-510 ActionREAction
+            </a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse">
+                <ul class="navbar-nav">
+                    {% if not user %}
+                    <li class="nav-item active dropdown">
+                        <a href="/ActionREAction" class="nav-link dropdown-toggle"
+                            style="color: #9b2625;" download="app-debug.apk">
+                            Get the app now !
+                        </a>
+                    </li>
+                    <li class="nav-item active dropdown">
+                        <a href="/register" class="nav-link dropdown-toggle">
+                            Register
+                        </a>
+
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="/login" class="nav-link dropdown-toggle">
+                            Login
+                        </a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item active dropdown">
+                        <a href="/ActionREAction" class="nav-link dropdown-toggle"
+                            style="color: #9b2625;" download="app-debug.apk">
+                            Get the app now !
+                        </a>
+                    </li>
+                    <li class="nav-item active dropdown">
+                        <a href="/API_settings" class="nav-link dropdown-toggle">
+                            API_settings
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                            {{user}}
+                            <i class="ion-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a class="dropdown-item" href="ActionREAction">Home</a>
+                            <a class="dropdown-item" href="profil">Profil</a>
+                            <a class="dropdown-item" href="logout" style="color: #9b2625;">Logout</a>
+                        </div>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div class="main-content">
+            <div class="section__content section__content--p30">
+                <div style="text-align: -webkit-center;">
+                        <a href="/ActionREAction">
+                            <button class="au-btn au-btn-icon au-btn--yellow"> Epitech </button>
+                        </a>
+                        <a href="/news_section">
+                            <button class="au-btn au-btn-icon au-btn--orange"> News </button>
+                        </a>
+                        <a href="/youtube_section">
+                            <button class="au-btn au-btn-icon au-btn--yellow"> Youtube </button>
+                        </a>
+                        <a href="/meteo_section">
+                            <button class="au-btn au-btn-icon au-btn--yellow"> Meteo </button>
+                        </a>
+                        <a href="/scheduler_section">
+                            <button class="au-btn au-btn-icon au-btn--yellow"> Scheduler </button>
+                        </a>
+                        <a href="/mailer_section">
+                            <button class="au-btn au-btn-icon au-btn--yellow"> Mailer </button>
+                        </a>
+                </div>
+                    {# NEWS SECTION     #}
+                    {# PLUGIN 1 SECTION #}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="overview-item overview-item--c1">
+                                <div class="overview-wrap">
+                                    <img src="../images/mail.svg" height="50px" width="50px">
+                                    <h2 class="title-1">Random News <img src="../images/right-arrow.svg" draggable="false" height="50px" width="50px"> Imgur</h2>
+                                    <form action="/news_section" method="post">
+                                        <input style="display: none;" type="text" value="1" name="imgurnews">
+                                        <input type="submit" class="btn-shadow btn-shadow-primary" value="Submit" style="float: right;">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# PLUGIN 2 SECTION #}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="overview-item overview-item--c1">
+                                <div class="overview-wrap">
+                                    <img src="../images/mail.svg" height="50px" width="50px">
+                                    <h2 class="title-1">News From Category <img src="../images/right-arrow.svg" draggable="false" height="50px" width="50px"> Mail</h2>
+                                </div>
+                                <form action="/news_section" method="post">
+                                    <input type="text" placeholder="email" name="newscategorymail" required>
+                                    {# <input type="text" placeholder="ex: business, entertainment, general, health, science, sports, technology" name="newscategory" required> #}
+                                    <select name="newscategory" required>
+                                        <option value="business">business</option>
+                                        <option value="entertainment">entertainment</option>
+                                        <option value="hamsgeneralter">general</option>
+                                        <option value="health">health</option>
+                                        <option value="science">science</option>
+                                        <option value="sports">sports</option>
+                                        <option value="technology">technology</option>
+                                    </select>
+                                    <input type="submit" class="btn-shadow btn-shadow-primary" value="Submit" style="float: right;">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    {# PLUGIN 3 SECTION #}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="overview-item overview-item--c1">
+                                <div class="overview-wrap">
+                                    <img src="../images/mail.svg" height="50px" width="50px">
+                                    <h2 class="title-1">News From Subject <img src="../images/right-arrow.svg" draggable="false" height="50px" width="50px"> Mail</h2>
+                                </div>
+                                <div>
+                                    <form action="/news_section" method="post">
+                                        <input type="text" placeholder="email" name="p3newsmail" required>
+                                        <input type="text" placeholder="subject" name="p3newssubject" required>
+                                        <input type="submit" class="btn-shadow btn-shadow-primary" value="Submit" style="float: right;">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {# PLUGIN 4 SECTION #}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="overview-item overview-item--c1">
+                                <div class="overview-wrap">
+                                    <img src="../images/mail.svg" height="50px" width="50px">
+                                    <h2 class="title-1">News On Last News <img src="../images/right-arrow.svg" draggable="false" height="50px" width="50px"> Mail</h2>
+                                </div>
+                                <div>
+                                    <form action="/news_section" method="post">
+                                        <input type="text" placeholder="15s ou 2min ou 1h" name="lastnewsupdate" required>
+                                        <input type="text" placeholder="email" name="lastnewsemail" required>
+                                        <input type="submit" class="btn-shadow btn-shadow-primary" value="Submit" style="float: right;">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="bottom">
+                <ul>
+                    <li><a href="#">2021</a></li>
+                </ul>
+
+                <p>Made by:</p>
+                <ul>
+                    <li>Bruno Cazabat</li>
+                    <li>Baptiste Terras</li>
+                    <li>Loic Dumont-Roty</li>
+                    <li>Hakim Bentoumi</li>
+                    <li>Hugo de Zordo</li>
+                    <li>Vincent Gauzargues</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js">
+    </script>
+    <!-- Main JS-->
+    <script src="javascripts/main.js"></script>
+</body>
+
+</html>

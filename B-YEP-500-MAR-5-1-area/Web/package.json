@@ -1,0 +1,28 @@
+{
+    "name": "dev-actionreaction-2021",
+    "version": "0.0.0",
+    "private": true,
+    "proxy": "http://localhost:8080",
+    "scripts": {
+        "dev": "nodemon app.js"
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "body-parser": "^1.19.0",
+        "connect-flash": "^0.1.1",
+        "curl": "^0.1.4",
+        "debug": "^4.3.1",
+        "express": "^4.17.1",
+        "express-session": "^1.17.1",
+        "get-json": "^1.0.1",
+        "http-errors": "^1.8.0",
+        "total.js": "^3.4.6",
+        "twig": "^1.15.4",
+        "passport": "^0.4.1",
+        "passport-google-oauth20": "^2.0.0",
+        "cookie-session": "^1.4.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.6"
+    }
+}

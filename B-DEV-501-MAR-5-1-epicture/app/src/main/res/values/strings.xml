@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Epicture</string>
+    <string name="title_home">My_img</string>
+    <string name="title_dashboard">Home</string>
+    <string name="title_favourites">My_fav</string>
+    <string name="title_upload">Upload</string>
+    <string name="title_search">Search</string>
+    <string name="log_out">Log Out</string>
+    <string name="username">Username</string>
+    <string name="todo">TODO</string>
+</resources>
